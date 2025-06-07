@@ -1,0 +1,405 @@
+/* src/assets/styles/global.css */
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../fonts/PretendardVariable.woff2') format('woff2');
+  font-weight: 45 920;
+  font-display: swap;
+  font-style: normal;
+}
+/* 기본 전체 레이아웃 */
+/* 로고 이미지 */
+.logo-img {
+  height: 80px;
+  object-fit: contain;
+}
+
+/* 네비게이션 링크 스타일 */
+.nav-link {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #f88d2b;
+}
+
+.router-link-active {
+  color: #f88d2b !important;
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif !important;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+header.header-wrapper{
+  background-color: #fff;
+}
+
+.header-inner {
+  background-color:#FFC461;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+header h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+header p {
+  margin-top: 0.5rem;
+  color: #5c432d;
+  font-size: 0.95rem;
+}
+
+.mian-container{
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+
+}
+
+/* 메인 토리 이미지 */
+.main-tori{
+  width: 70%;
+  max-width: 200px;
+  height: auto;
+  margin: 1rem auto;
+}
+.circle-bg {
+  background-color: white;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* 추천 섹션 */
+.recommend-section {
+  background-color: #a45c1e;
+  padding: 2rem 1rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recommend-btn {
+  background-color: #f88d2b;
+  border: none;
+  padding: 0.4rem 8rem;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
+  .circle-bg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .main-tori {
+    max-width: 150px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .recommend-section {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+
+/* 섹션 공통 스타일 */
+main section {
+  padding: 0 ;
+  margin:0;
+}
+
+/* 베스트셀러 */
+.bestseller-list {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.bestseller-list .book-card {
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.bestseller-list img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.bestseller-list h4 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.bestseller-list p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* BookList Page 스타일 */
+.book-page-wrapper {
+  background-color: #fff;
+}
+
+.book-section-background {
+  background-color: #fff2db; /* 도서 리스트만 살구색 배경 */
+  border-radius: 12px;
+  padding-top: 2rem;
+}
+
+
+/* book-card */
+.book-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.03);
+  transition: transform 0.2s ease;
+  text-align: center;
+  height: 100%;
+}
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.book-card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.book-card-author {
+  font-size: 0.875rem;
+  color: #555;
+}
+
+/* 도서 디테일 페이지 */
+.book-info-section {
+  background-color: #fde6c8;
+}
+.book-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.book-cover-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.author-card {
+  background-color: #fff1d6;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.author-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.author-info-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;       /* 최대 줄 수 설정 (여기선 3줄) */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+/* 추천/지도 */
+.recommend-map h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Threads */
+/* 전체 ThreadList 컨테이너 */
+.thread-page-wrapper {
+  background-color: #fff;  /* or none */
+}
+.thread-card {
+  background-color: rgba(255, 255, 255, 0.3);  /* 반투명 흰색 */
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.thread-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+/* Thread 목록 배경만 따로 지정 */
+.thread-section-background {
+  background-color: #f1e1d2;
+  border-radius: 12px;
+  padding-top: 2rem;
+}
+
+/* 검색창 */
+.search-bar {
+  background-color: #f0f4fc;
+  border: none;
+  height: 48px;
+  padding: 0 1rem;
+  border-radius: 8px;
+}
+
+/* 카테고리 버튼 스타일 */
+.category-btn {
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  background-color: #ffa94d;
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.category-btn.active {
+  background-color: #ff6701;
+}
+
+.category-btn:hover {
+  background-color: #ff7f2a;
+}
+
+
+.thread-title {
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #888;
+  text-align: center;
+}
+
+footer .footer-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo{
+  height: 100px;
+  object-fit: contain;
+}
+
+/* 로그인 */
+/* 로그인 전체 박스 가운데 정렬 */
+.login-container {
+  min-height: 80vh;
+  padding-top: 5vh;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* 로그인 버튼 색상 */
+
+.login-btn:hover {
+  background-color: #f8b13d;
+}
+
+/* 회원가입페이지 */
+.signup-container {
+  min-height: 90vh;
+  padding-top: 3rem;
+}
+
+.signup-box {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* 관심 카테고리 체크박스 구역 강조 */
+.genre-box {
+  border: 2px dashed #c8a4ff;
+}
+
+/* 프로필 카드 스타일 */
+.profile-card {
+  border-radius: 12px;
+  background-color: #fff8e6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 프로필 이미지 반응형 */
+.profile-img {
+  max-width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}

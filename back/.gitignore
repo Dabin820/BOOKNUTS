@@ -1,0 +1,50 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Django stuff:
+*.sqlite3
+*.log
+*.pot
+*.pyc
+*.mo
+*.db
+
+# Django fixtures
+**/fixtures/
+
+# Migrations (선택적으로 무시)
+**/migrations/
+!**/migrations/__init__.py
+
+# Environment variables
+.env
+*.env
+
+# Static and media files
+staticfiles/
+media/
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Coverage, test output
+htmlcov/
+.coverage
+.tox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# Mac OS
+.DS_Store
